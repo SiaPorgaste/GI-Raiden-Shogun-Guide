@@ -1,0 +1,317 @@
+* {
+  background-color: black;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px purple solid;
+  border-collapse: collapse;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.header {
+  text-align: center;
+  background-color: purple;
+}
+
+.sub-header {
+  text-align: center;
+  background-color: #8a2948;
+}
+
+.sub-sub-header {
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.header-font {
+  font-size: 2.2rem;
+  background-color: purple;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.introSlides {
+  display: none;
+  width: 80%;
+  height: 800px;
+}
+
+.introTxt {
+  display: none;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 100%;
+  min-width: 50%;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.weapon-container.w3-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tab-half {
+  flex: 1;
+  cursor: pointer;
+  border: 1px white solid;
+  border-radius: 4px;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+}
+
+.tab-half:hover {
+  background-color: blueviolet;
+  font-weight: bold;
+}
+
+.tab-half.active {
+  background-color: purple;
+  font-weight: bolder;
+  transition: background-color 0.3s ease;
+}
+
+.tab-half.active:hover {
+  background-color: blue;
+}
+
+.table-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container.active {
+  display: flex;
+}
+
+.table-container img {
+  max-width: 50%;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.table-container table {
+  width: 50%;
+  height: 100%;
+}
+
+#infoTable th {
+  padding: 15px;
+  text-align: left;
+}
+
+#infoTable td {
+  padding: 15px;
+  text-align: center;
+}
+
+#infoTable ul li {
+  list-style-type: none;
+}
+
+#rating {
+  color: darkred;
+}
+
+#rarity {
+  color: yellow;
+}
+
+#element {
+  color: purple;
+}
+
+.table-container-non-hidden {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-container-non-hidden table {
+  flex: 1;
+  margin: 20px;
+}
+
+.stat-table th {
+  padding: 15px;
+  text-align: center;
+}
+
+.stat-table td {
+  padding: 15px;
+}
+
+.lvl-table.w3-table td,
+.constellation-table.w3-table td {
+  vertical-align: middle;
+}
+
+.lvl-table .ascen.active td,
+.lvl-table .ascen.active td div,
+.lvl-table .ascen.active td div img,
+.lvl-table .ascen.active td div div p {
+  background-color: blueviolet;
+}
+
+.ascen-mats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ascen-mat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+.ascen-mat-img {
+  width: 50%;
+}
+
+.w3-bar {
+  margin-bottom: 1rem;
+}
+
+.talent-container {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.weapon-table.w3-table,
+.talent-table.w3-table,
+.talent-mat-table.w3-table {
+  width: 50%;
+  margin: 1rem;
+}
+
+.weapon-table.w3-table td,
+.weapon-table.w3-table th,
+.talent-table.w3-table td,
+.talent-mat-table.w3-table td {
+  vertical-align: middle;
+}
+
+.talent-icon,
+.talent-type {
+  width: 15%;
+}
+
+.button-dropdown-container {
+  width: 100%;
+}
+
+.attribute-btn {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribute-btn,
+#icon_arrow_downward {
+  padding: 5px;
+  background-color: purple;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.attribute-btn:hover,
+.attribute-btn:hover #icon_arrow_downward {
+  background-color: blueviolet;
+}
+
+#NADropdownDetail.w3-dropdown-content,
+#skillDropdownDetail.w3-dropdown-content,
+#burstDropdownDetail.w3-dropdown-content,
+#firstTalentNote.w3-dropdown-content,
+#forthTalentNote.w3-dropdown-content {
+  position: relative;
+  max-width: 100%;
+  background-color: black;
+  border: 1px purple solid;
+  padding: 10px;
+}
+
+.constellation-icon,
+.constellation-lvl {
+  width: 15%;
+}
+
+.constellation-table.w3-table {
+  width: 98%;
+  margin: 1rem;
+}
+
+.tag.w3-tag {
+  background-color: #8a2948;
+  padding: 10px 15px;
+}
+
+.tag.w3-tag,
+.infoParagraph {
+  margin: 1rem;
+}
+
+.infoPopUpTxt {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.infoPopUpImg {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+.weapon-table.w3-table .striped-table-row {
+  background-color: #322836;
+}
+
+.weapon-table.w3-table,
+.weapon-table.w3-table th,
+.weapon-table.w3-table td,
+.weapon-table.w3-table tr {
+  border: none;
+}
+
+.weapon-table.w3-table thead,
+.weapon-table.w3-table tbody {
+  border-bottom: 5px white solid;
+}
+
+.weaponImg {
+  width: 100%;
+  height: auto;
+}

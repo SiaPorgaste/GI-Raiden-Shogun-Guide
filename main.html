@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raiden Shogun</title>
+    <link rel="icon" href="img/Element_Electro.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <h1 class="header">
+      <b class="header-font">Raiden Guide: Eternal Transience</b>
+    </h1>
+    <div class="slider">
+      <img class="introSlides" src="img/1316101.png">
+      <span class="introTxt">Discovered by <b>Invictus</b></span>
+      <img class="introSlides" src="img/1362745.png">
+      <span class="introTxt">Art by <b>patrika</b></span>
+      <img class="introSlides" src="img/introImg.png">
+      <span class="introTxt">Art by <b>patrika</b></span>
+    </div>
+    <h2 class="header">
+      <b class="header-font">Basic Info</b>
+    </h2>
+    <div class="container">
+      <div class="tabs-container">
+        <button
+          id="gameInfo"
+          class="tab-half active"
+          onclick="toggleTab('gameInfo','loreInfo')"
+        >
+          Game Info
+        </button>
+        <button
+          id="loreInfo"
+          class="tab-half"
+          onclick="toggleTab('loreInfo','gameInfo')"
+        >
+          Lore Info
+        </button>
+      </div>
+      <div class="table-container active" id="gameInfoTable">
+        <img src="img/gameInfoImg.png" id="gameInfoImg" />
+        <table id="infoTable">
+          <tbody>
+            <tr>
+              <th colspan="2">Raiden Shogun</th>
+            </tr>
+            <tr>
+              <th>Rating</th>
+              <td id="rating">SS</td>
+            </tr>
+            <tr>
+              <th>Rarity</th>
+              <td id="rarity">SSR</td>
+            </tr>
+            <tr>
+              <th>Element</th>
+              <td id="element">Electro</td>
+            </tr>
+            <tr>
+              <th>Weapon</th>
+              <td id="weapon">Polearm</td>
+            </tr>
+            <tr>
+              <th>Voice Actors</th>
+              <td>
+                <ul>
+                  <li>Anne Yatco (EN)</li>
+                  <li>Sawashiro Miyuki (JP)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-container" id="loreInfoTable">
+        <img src="img/loreInfoImg.png" id="loreInfoImg" />
+        <table id="infoTable">
+          <tbody>
+            <tr>
+              <th colspan="2">Raiden Shogun</th>
+            </tr>
+            <tr>
+              <th>Title</th>
+              <td id="title">Plane of Euthymia</td>
+            </tr>
+            <tr>
+              <th>Other name</th>
+              <td id="otherName">Raiden Ei</td>
+            </tr>
+            <tr>
+              <th>Affiliation</th>
+              <td id="affiliation">Inazuma City</td>
+            </tr>
+            <tr>
+              <th>Birthday</th>
+              <td id="birthday">6/26</td>
+            </tr>
+            <tr>
+              <th>Constellation</th>
+              <td>Imperatrix Umbrosa</td>
+            </tr>
+            <tr>
+              <th>Nation</th>
+              <td>Inazuma</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <h2 class="header">
+      <b class="header-font">Base Stats</b>
+    </h2>
+    <div class="container">
+      <div class="table-container-non-hidden">
+        <table class="stat-table">
+          <tr>
+            <th>Stat</th>
+            <th>Value</th>
+          </tr>
+          <tr>
+            <th>HP</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statHP"
+                  style="height: 24px; width: 7.785%"
+                >
+                  1,004/12,907
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>ATK</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statATK"
+                  style="height: 24px; width: 7.784%"
+                >
+                  26/337
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>DEF</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statDEF"
+                  style="height: 24px; width: 7.785%"
+                >
+                  61/789
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Energy Recharge%</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statER"
+                  style="height: 24px; width: 51.02%"
+                >
+                  100%/196%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Crit Rate%</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statCR"
+                  style="height: 24px; width: 100%"
+                >
+                  5%/5%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Crit Damage%</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statCD"
+                  style="height: 24px; width: 100%"
+                >
+                  100%/100%
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Elemental Mastery</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statEM"
+                  style="height: 24px; width: 100%"
+                >
+                  0/0
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Electro Damage Bonus%</th>
+            <td>
+              <div class="w3-border w3-border-purple">
+                <div
+                  class="w3-container w3-purple w3-center"
+                  id="statElectroDmgBonus"
+                  style="height: 24px; width: 100%"
+                >
+                  0%/0%
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table class="lvl-table w3-table w3-centered">
+          <thead>
+            <tr>
+              <th>Ascension Phase</th>
+              <th>Level</th>
+              <th>Material</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="firstAscen" class="ascen active">
+              <td>0*</td>
+              <td id="firstAscenLvl">1/20</td>
+              <td>
+                None
+              </td>
+            </tr>
+            <tr id="secondAscen" class="ascen">
+              <td>1*</td>
+              <td id=secondAscenLvl>20/40</td>
+              <td>
+                <div class="ascen-mats-container">
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/mora.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>20,000</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Vajrada_Amethyst_Sliver.png" alt="Vajrada_Amethyst_Sliver"/>
+                    <div class="w3-container">
+                      <p>1</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Amakumo_Fruit.png" alt="Amakumo_Fruit"/>
+                    <div class="w3-container">
+                      <p>3</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Old_Handguard.png" alt="Old_Handguard"/>
+                    <div class="w3-container">
+                      <p>3</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr id="thirdAscen" class="ascen">
+              <td>2*</td>
+              <td id="thirdAscenLvl">40/50</td>
+              <td>
+                <div class="ascen-mats-container">
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/mora.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>40,000</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Storm_Beads.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>2</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Vajrada_Amethyst_Fragment.png" alt="Vajrada_Amethyst_Sliver"/>
+                    <div class="w3-container">
+                      <p>3</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Amakumo_Fruit.png" alt="Amakumo_Fruit"/>
+                    <div class="w3-container">
+                      <p>10</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Old_Handguard.png" alt="Old_Handguard"/>
+                    <div class="w3-container">
+                      <p>15</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr id="fourthAscen" class="ascen">
+              <td>3*</td>
+              <td id="fourthAscenLvl">50/60</td>
+              <td>
+                <div class="ascen-mats-container">
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/mora.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>60,000</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Storm_Beads.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>4</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Vajrada_Amethyst_Fragment.png" alt="Vajrada_Amethyst_Sliver"/>
+                    <div class="w3-container">
+                      <p>6</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Amakumo_Fruit.png" alt="Amakumo_Fruit"/>
+                    <div class="w3-container">
+                      <p>20</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Kageuchi_Handguard.png" alt="Old_Handguard"/>
+                    <div class="w3-container">
+                      <p>12</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr id="fifthAscen" class="ascen">
+              <td>4*</td>
+              <td id="fifthAscenLvl">60/70</td>
+              <td>
+                <div class="ascen-mats-container">
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/mora.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>80,000</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Storm_Beads.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>8</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Vajrada_Amethyst_Chunk.png" alt="Vajrada_Amethyst_Sliver"/>
+                    <div class="w3-container">
+                      <p>3</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Amakumo_Fruit.png" alt="Amakumo_Fruit"/>
+                    <div class="w3-container">
+                      <p>30</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Kageuchi_Handguard.png" alt="Old_Handguard"/>
+                    <div class="w3-container">
+                      <p>18</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr id="sixthAscen" class="ascen">
+              <td>5*</td>
+              <td id="sixthAscenLvl">70/80</td>
+              <td>
+                <div class="ascen-mats-container">
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/mora.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>100,000</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Storm_Beads.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>12</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Vajrada_Amethyst_Chunk.png" alt="Vajrada_Amethyst_Sliver"/>
+                    <div class="w3-container">
+                      <p>6</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Amakumo_Fruit.png" alt="Amakumo_Fruit"/>
+                    <div class="w3-container">
+                      <p>45</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Famed_Handguard.png" alt="Old_Handguard"/>
+                    <div class="w3-container">
+                      <p>12</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr id="seventhAscen" class="ascen">
+              <td>6*</td>
+              <td id="seventhAscenLvl">80/90</td>
+              <td>
+                <div class="ascen-mats-container">
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/mora.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>120,000</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Storm_Beads.png" alt="Mora"/>
+                    <div class="w3-container">
+                      <p>20</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Vajrada_Amethyst_Gemstone.png" alt="Vajrada_Amethyst_Sliver"/>
+                    <div class="w3-container">
+                      <p>6</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Amakumo_Fruit.png" alt="Amakumo_Fruit"/>
+                    <div class="w3-container">
+                      <p>60</p>
+                    </div>
+                  </div>
+                  <div class="ascen-mat-container w3-card" style="width:15%">
+                    <img class="ascen-mat-img" src="img/Item_Famed_Handguard.png" alt="Old_Handguard"/>
+                    <div class="w3-container">
+                      <p>24</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="w3-bar">
+        <button class="w3-bar w3-button w3-purple w3-border w3-border-white w3-round" style="width: 33%" id="lvlUpBtn" onClick="levelUp()">Level up</button>
+        <button class="w3-bar w3-button w3-deep-purple w3-border w3-border-white w3-round w3-disabled" id="ascBtn" style="width: 33%" onClick="ascension()">Ascension</button>
+        <button class="w3-bar w3-button w3-red w3-border w3-border-white w3-round w3-disabled" style="width: 33%" id="resetBtn" onClick="reset()">Reset</button>
+      </div>
+      <h2 class="header">
+        <b class="header-font">Talents</b>
+      </h2>
+      <div class="container talent-container">
+        <table class="talent-table w3-table w3-centered">
+          <thead>
+            <tr>
+              <th class="talent-icon">Icon</th>
+              <th class="talent-name">Name</th>
+              <th class="talent-type">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="talent-icon-img">
+                <img src="img/Polearm_Electro.png"/>
+              </td>
+              <td class="talent-name-text">Origin</td>
+              <td class="talent-type-text">Normal Attack</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="w3-left-align">
+                <p>
+                  <b>Normal Attack</b><br/>
+                  Performs up to 5 consecutive spear strikes.<br/>
+                  <br/>
+                  <b>Charged Attack</b><br/>
+                  Consumes a certain amount of Stamina to perform an upward slash.<br/>
+                  <br/>
+                  <b>Plunging Attack</b><br/>
+                  Plunges from mid-air to strike the ground below, damaging opponents along the path and dealing AoE DMG upon impact.
+                </p>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('NADropdownDetail')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Attribute Scaling
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top" id="NADropdownDetail">
+                    <span>Talent Levels past 10 require Elemental Skill Level Increase methods, such as Constellations and Event bonuses.</span>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>1</th>
+                          <th>2</th>
+                          <th>3</th>
+                          <th>4</th>
+                          <th>5</th>
+                          <th>6</th>
+                          <th>7</th>
+                          <th>8</th>
+                          <th>9</th>
+                          <th>10</th>
+                          <th>11</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1-Hit DMG (%)</td>
+                          <td>39.65</td>
+                          <td>42.87</td>
+                          <td>46.1</td>
+                          <td>50.71</td>
+                          <td>53.94</td>
+                          <td>57.63</td>
+                          <td>62.7</td>
+                          <td>67.77</td>
+                          <td>72.84</td>
+                          <td>78.37</td>
+                          <td>84.71</td>
+                        </tr>
+                        <tr>
+                          <td>2-Hit DMG (%)</td>
+                          <td>39.73</td>
+                          <td>42.97</td>
+                          <td>46.2</td>
+                          <td>50.82</td>
+                          <td>54.05</td>
+                          <td>57.75</td>
+                          <td>62.83</td>
+                          <td>67.91</td>
+                          <td>73</td>
+                          <td>78.54</td>
+                          <td>84.89</td>
+                        </tr>
+                        <tr>
+                          <td>3-Hit DMG (%)</td>
+                          <td>49.88</td>
+                          <td>53.94</td>
+                          <td>58</td>
+                          <td>63.8</td>
+                          <td>67.86</td>
+                          <td>72.5</td>
+                          <td>78.88</td>
+                          <td>85.26</td>
+                          <td>91.64</td>
+                          <td>98.6</td>
+                          <td>106.58</td>
+                        </tr>
+                        <tr>
+                          <td>4-Hit DMG (%)</td>
+                          <td>28.98 + 28.98</td>
+                          <td>	31.34
+                            +
+                            31.34	</td>
+                          <td>33.7
+                            +
+                            33.7	</td>
+                          <td>37.07
+                            +
+                            37.07	</td>
+                          <td>39.43
+                            +
+                            39.43	</td>
+                          <td>42.13
+                            +
+                            42.13	</td>
+                          <td>45.83
+                            +
+                            45.83	</td>
+                          <td>49.54
+                            +
+                            49.54	</td>
+                          <td>53.25
+                            +
+                            53.25	</td>
+                          <td>57.29
+                            +
+                            57.29	</td>
+                          <td>61.92
+                            +
+                            61.92</td>
+                        </tr>
+                      </tr>
+                      <tr>
+                        <td>5-Hit DMG (%)</td>
+                        <td>65.45</td>
+                        <td>70.77</td>
+                        <td>76.1</td>
+                        <td>83.71</td>
+                        <td>89.04</td>
+                        <td>95.13</td>
+                        <td>103.5</td>
+                        <td>111.87</td>
+                        <td>120.24</td>
+                        <td>129.37</td>
+                        <td>139.83</td>
+                      </tr>
+                      <tr>
+                        <td colspan="12">
+                          <b>Charged Attack</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Charged Attack DMG (%)</td>
+                        <td>99.59</td>
+                        <td>107.69</td>
+                        <td>115.8</td>
+                        <td>127.38</td>
+                        <td>135.49</td>
+                        <td>144.75</td>
+                        <td>157.49</td>
+                        <td>170.23</td>
+                        <td>182.96</td>
+                        <td>196.86</td>
+                        <td>212.78</td>
+                      </tr>
+                      <tr>
+                        <td>Charged Attack Stamina Cost</td>
+                        <td colspan="11">25</td>
+                      </tr>
+                      <tr>
+                        <td colspan="12">
+                          <b>Plunging Attack</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Plunge DMG (%)</td>
+                        <td>63.93</td>
+                        <td>69.14</td>
+                        <td>74.34</td>
+                        <td>81.77</td>
+                        <td>86.98</td>
+                        <td>92.92</td>
+                        <td>101.1</td>
+                        <td>109.28</td>
+                        <td>117.46</td>
+                        <td>126.38</td>
+                        <td>135.3</td>
+                      </tr>
+                      <tr>
+                        <td>Low Plunge DMG (%)</td>
+                        <td>127.84</td>
+                        <td>138.24</td>
+                        <td>148.65</td>
+                        <td>163.51</td>
+                        <td>173.92</td>
+                        <td>185.81</td>
+                        <td>202.16</td>
+                        <td>218.51</td>
+                        <td>234.86</td>
+                        <td>252.7</td>
+                        <td>270.54</td>
+                      </tr>
+                      <tr>
+                        <td>High Plunge DMG (%)</td>
+                        <td>159.68</td>
+                        <td>172.67</td>
+                        <td>185.67</td>
+                        <td>204.24</td>
+                        <td>217.23</td>
+                        <td>232.09</td>
+                        <td>252.51</td>
+                        <td>272.93</td>
+                        <td>293.36</td>
+                        <td>315.64</td>
+                        <td>337.92</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('NADropdownAnimation')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Preview
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top w3-card-4" id="NADropdownAnimation">
+                    <img src="img/Origin_Normal_PPreview.gif" style="width:100%"/>
+                    <div class="w3-container">
+                      <span>Normal Attack</span>
+                    <img src="img/Origin_Charged_Preview.gif" style="width:100%"/>
+                    <div class="w3-container">
+                      <span>Charge Attack</span>
+                    </div>
+                    <img src="img/Origin_Plunging_Preview.gif" style="width: 100%"/>
+                    <div class="w3-container">
+                      <span>Plunging Attack</span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="talent-icon-img">
+                <img src="img/Talent_Transcendence_Baleful_Omen.png"/>
+              </td>
+              <td class="talent-name-text">Transcendence: Baleful Omen</td>
+              <td class="talent-type-text">Elemental Skill</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="w3-left-align">
+                <p>
+                The Raiden Shogun unveils a shard of her Euthymia,
+                dealing <span class="w3-text-purple">Electro DMG</span> to nearby opponents,
+                and granting nearby party members the Eye of Stormy Judgment.<br/>
+                <br/>
+                <b>Eye of Stormy Judgment</b>
+                <ul>
+                  <li style="list-style-type: disc">
+                    <p>When characters with this buff attack and deal DMG to opponents, the Eye will unleash a coordinated attack,
+                    dealing <span class="w3-text-purple">AoE Electro DMG</span> at the opponent's position.</p>
+                  </li>
+                  <li style="list-style-type: disc">
+                    <p>Characters who gain the Eye of Stormy Judgment will have their Elemental Burst DMG increased based on the Energy
+                    Cost of the Elemental Burst during the Eye's duration.
+                    </p>
+                  </li>
+                </ul>
+                The Eye can initiate one coordinated attack every 0.9s per party.<br/>
+                Coordinated attacks generated by characters not controlled by you deal 20% of the normal DMG.
+                </p>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('skillDropdownDetail')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Attribute Scaling
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top" id="skillDropdownDetail">
+                    <span>Talent Levels past 10 require Elemental Skill Level Increase methods, such as Constellations and Event bonuses.</span>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>1</th>
+                          <th>2</th>
+                          <th>3</th>
+                          <th>4</th>
+                          <th>5</th>
+                          <th>6</th>
+                          <th>7</th>
+                          <th>8</th>
+                          <th>9</th>
+                          <th>10</th>
+                          <th>11</th>
+                          <th>12</th>
+                          <th>13</th>
+                          <th>14</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Skill DMG (%)</td>
+                          <td>117.2</td>
+                          <td>125.99</td>
+                          <td>134.78</td>
+                          <td>146.5</td>
+                          <td>155.29</td>
+                          <td>164.08</td>
+                          <td>175.8</td>
+                          <td>187.52</td>
+                          <td>199.24</td>
+                          <td>210.96</td>
+                          <td>222.68</td>
+                          <td>234.4</td>
+                          <td>249.05</td>
+                          <td>263.7</td>
+                        </tr>
+                        <tr>
+                          <td>Coordinated ATK DMG (%)</td>
+                          <td>42</td>
+                          <td>45.15</td>
+                          <td>48.3</td>
+                          <td>52.5</td>
+                          <td>55.65</td>
+                          <td>58.8</td>
+                          <td>63</td>
+                          <td>67.2</td>
+                          <td>71.4</td>
+                          <td>75.6</td>
+                          <td>79.8</td>
+                          <td>84</td>
+                          <td>89.25</td>
+                          <td>94.5</td>
+                        </tr>
+                        <tr>
+                          <td>Duration</td>
+                          <td colspan="14">
+                            <b>25s</b>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Elemental Burst DMG Bonus (%)</td>
+                          <td>0.22 Per Energy</td>
+                          <td>0.23 Per Energy</td>
+                          <td>0.24 Per Energy</td>
+                          <td>0.25 Per Energy</td>
+                          <td>0.26 Per Energy</td>
+                          <td>0.27 Per Energy</td>
+                          <td>0.28 Per Energy</td>
+                          <td>0.29 Per Energy</td>
+                          <td colspan="6">0.3 Per Energy</td>
+                        </tr>
+                        <tr>
+                          <td>CD</td>
+                          <td colspan="15">10s</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('skillDropdownAnimation')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Preview
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top w3-card-4" id="skillDropdownAnimation">
+                    <img src="img/Transcendence_Baleful_Omen_Preview.gif" style="width:100%"/>
+                    <div class="w3-container">
+                      <span>Press</span>
+                    <img src="img//Transcendence_Baleful_Omen_Eye_of_Stormy_Judgment_Preview.gif" style="width:100%"/>
+                    <div class="w3-container">
+                      <span>Eye of Stormy Judgment</span>
+                    </div>
+                    <img src="img/Transcendence_Baleful_Omen_Eye_of_Stormy_Judgment_Attacks_Preview.gif" style="width: 100%"/>
+                    <div class="w3-container">
+                      <span>Eye of Stormy Judgment, coordinated attacks</span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="talent-icon-img">
+                <img src="img/Talent_Secret_Art_Musou_Shinsetsu.png"/>
+              </td>
+              <td class="talent-name-text">Secret Art: Musou Shinsetsu</td>
+              <td class="talent-type-text">Elemental Burst</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="w3-left-align">
+                <p>
+                Gathering truths unnumbered and wishes uncounted, the Raiden Shogun unleashes the Musou no Hitotachi and deals 
+                <span class="w3-text-purple">AoE Electro DMG</span>, 
+                using Musou Isshin in combat for a certain duration afterward. The DMG dealt by Musou no Hitotachi and Musou Isshin's attacks will 
+                be increased based on the number of Chakra Desiderata's Resolve stacks consumed when this skill is used.<br/>
+                <br/>
+                <b>Musou Isshin</b><br/>
+                While in this state, the Raiden Shogun will wield her tachi in battle, while her Normal, Charged, 
+                and Plunging Attacks will be infused with <span class="w3-text-purple">Electro DMG</span>, which cannot be overridden. 
+                When such attacks hit opponents, she will regenerate Energy for all nearby party members. 
+                Energy can be restored this way once every 1s, and this effect can be triggered 5 times throughout this skill's duration.
+                While in this state, the Raiden Shogun's resistance to interruption is increased, and she is immune to 
+                <span class="w3-text-purple">Electro-Charged</span> reaction DMG.
+                While Musou Isshin is active, the Raiden Shogun's Normal, Charged, and Plunging Attack DMG will be considered Elemental Burst DMG.<br/>
+                <br/>
+                The effects of Musou Isshin will be cleared when the Raiden Shogun leaves the field.<br/>
+                <br/>
+                <b>Chakra Desiderata</b><br/>  
+                When nearby party members (excluding the Raiden Shogun herself) use their Elemental Bursts, 
+                the Raiden Shogun will build up Resolve stacks based on the Energy Cost of these Elemental Bursts.<br/>
+                The maximum number of Resolve stacks is 60.<br/>
+                <br/>
+                The Resolve gained by Chakra Desiderata will be cleared 300s after the Raiden Shogun leaves the field.
+                </p>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('burstDropdownDetail')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Attribute Scaling
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top" id="burstDropdownDetail">
+                    <span>Talent Levels past 10 require Elemental Burst Level Increase methods, such as Constellations and Event bonuses.</span>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>1</th>
+                          <th>2</th>
+                          <th>3</th>
+                          <th>4</th>
+                          <th>5</th>
+                          <th>6</th>
+                          <th>7</th>
+                          <th>8</th>
+                          <th>9</th>
+                          <th>10</th>
+                          <th>11</th>
+                          <th>12</th>
+                          <th>13</th>
+                          <th>14</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Musou no Hitotachi Base DMG (%)</td>
+                          <td>400.8</td>
+                          <td>430.86</td>
+                          <td>460.92</td>
+                          <td>501</td>
+                          <td>531.06</td>
+                          <td>561.12</td>
+                          <td>601.2</td>
+                          <td>641.28</td>
+                          <td>681.36</td>
+                          <td>721.44</td>
+                          <td>761.52</td>
+                          <td>801.6</td>
+                          <td>851.7</td>
+                          <td>902</td>
+                        </tr>
+                        <tr>
+                          <td>Resolve Bonus</td>
+                          <td>3.89% Initial/0.73% ATK DMG Per Stack</td>
+                          <td>4.18% Initial/0.78% ATK DMG Per Stack</td>
+                          <td>4.47% Initial/0.84% ATK DMG Per Stack</td>
+                          <td>4.86% Initial/0.91% ATK DMG Per Stack</td>
+                          <td>5.15% Initial/0.96% ATK DMG Per Stack</td>
+                          <td>5.44% Initial/1.02% ATK DMG Per Stack</td>
+                          <td>5.83% Initial/1.09% ATK DMG Per Stack</td>
+                          <td>6.22% Initial/1.16% ATK DMG Per Stack</td>
+                          <td>6.61% Initial/1.23% ATK DMG Per Stack</td>
+                          <td>7% Initial/1.31% ATK DMG Per Stack</td>
+                          <td>7.39% Initial/1.38% ATK DMG Per Stack</td>
+                          <td>7.78% Initial/1.45% ATK DMG Per Stack</td>
+                          <td>8.26% Initial/1.54% ATK DMG Per Stack</td>
+                          <td>8.75% Initial/1.63% ATK DMG Per Stack</td>
+                        </tr>
+                        <tr>
+                          <td>Resolve Stacks Gained</td>
+                          <td>0.15 Per Energy Consumed</td>
+                          <td colspan="2">0.16 Per Energy Consumed</td>
+                          <td colspan="2">0.17 Per Energy Consumed</td>
+                          <td colspan="2">0.18 Per Energy Consumed</td>
+                          <td colspan="2">0.19 Per Energy Consumed</td>
+                          <td colspan="5">0.2 Per Energy Consumed</td>
+                        </tr>
+                        <tr>
+                          <td>1-Hit DMG (%)</td>
+                          <td>44.74</td>
+                          <td>47.79</td>
+                          <td>50.84</td>
+                          <td>54.91</td>
+                          <td>57.96</td>
+                          <td>61.51</td>
+                          <td>66.09</td>
+                          <td>70.66</td>
+                          <td>75.24</td>
+                          <td>79.82</td>
+                          <td>84.39</td>
+                          <td>88.97</td>
+                          <td>93.54</td>
+                          <td>98.1</td>
+                        </tr>
+                        <tr>
+                          <td>2-Hit DMG (%)</td>
+                          <td>43.96</td>
+                          <td>46.95</td>
+                          <td>49.95</td>
+                          <td>53.95</td>
+                          <td>56.94</td>
+                          <td>60.44</td>
+                          <td>64.94</td>
+                          <td>69.43</td>
+                          <td>73.93</td>
+                          <td>78.42</td>
+                          <td>82.92</td>
+                          <td>87.41</td>
+                          <td>91.91</td>
+                          <td>96.4</td>
+                        </tr>
+                        <tr>
+                          <td>3-Hit DMG (%)</td>
+                          <td>53.82</td>
+                          <td>57.49</td>
+                          <td>61.16</td>
+                          <td>66.05</td>
+                          <td>69.72</td>
+                          <td>74</td>
+                          <td>79.51</td>
+                          <td>85.01</td>
+                          <td>90.52</td>
+                          <td>96.02</td>
+                          <td>101.53</td>
+                          <td>107.03</td>
+                          <td>112.54</td>
+                          <td>118</td>
+                        </tr>
+                        <tr>
+                          <td>4-Hit DMG (%)</td>
+                          <td>30.89 + 30.98</td>
+                          <td>32.99 + 33.09</td>
+                          <td>35.1 + 35.2</td>
+                          <td>37.91 + 38.02</td>
+                          <td>40.01 + 40.13</td>
+                          <td>42.47 + 42.59</td>
+                          <td>45.63 + 45.76</td>
+                          <td>48.79 + 48.93</td>
+                          <td>51.95 + 52.1</td>
+                          <td>55.11 + 55.26</td>
+                          <td>58.27 + 58.43</td>
+                          <td>61.42 + 61.6</td>
+                          <td>64.58 + 64.77</td>
+                          <td>67.7 + 67.9</td>
+                        </tr>
+                        <tr>
+                          <td>5-Hit DMG (%)</td>
+                          <td>73.94</td>
+                          <td>78.99</td>
+                          <td>84.03</td>
+                          <td>90.75</td>
+                          <td>95.79</td>
+                          <td>101.67</td>
+                          <td>109.24</td>
+                          <td>116.8</td>
+                          <td>124.36</td>
+                          <td>131.92</td>
+                          <td>139.48</td>
+                          <td>147.05</td>
+                          <td>154.61</td>
+                          <td>162.2</td>
+                        </tr>
+                        <tr>
+                          <td>Charged Attack DMG (%)</td>
+                          <td>61.6 + 74.36</td>
+                          <td>65.8 + 79.43</td>
+                          <td>70 + 84.5</td>
+                          <td>75.6 + 91.26</td>
+                          <td>79.8 + 96.33</td>
+                          <td>84.7 + 102.25</td>
+                          <td>91 + 109.85</td>
+                          <td>97.3 + 117.45</td>
+                          <td>103.6 + 125.06</td>
+                          <td>109.9 + 132.67</td>
+                          <td>116.2 + 140.27</td>
+                          <td>122.5 + 147.88</td>
+                          <td>128.8 + 155.48</td>
+                          <td>135.1 + 163.1</td>
+                        </tr>
+                        <tr>
+                          <td>Charged Attack Stamina Cost</td>
+                          <td colspan="14">20</td>
+                        </tr>
+                        <tr>
+                          <td>Plunge DMG (%)</td>
+                          <td>63.93</td>
+                          <td>69.14</td>
+                          <td>74.34</td>
+                          <td>81.77</td>
+                          <td>86.98</td>
+                          <td>92.92</td>
+                          <td>101.1</td>
+                          <td>109.28</td>
+                          <td>117.46</td>
+                          <td>126.38</td>
+                          <td>135.3</td>
+                          <td>144.22</td>
+                          <td>153.14</td>
+                          <td>162.1</td>
+                        </tr>
+                        <tr>
+                          <td>Low Plunge DMG (%)</td>
+                          <td>127.84</td>
+                          <td>138.24</td>
+                          <td>148.65</td>
+                          <td>163.51</td>
+                          <td>173.92</td>
+                          <td>185.81</td>
+                          <td>202.16</td>
+                          <td>218.51</td>
+                          <td>234.86</td>
+                          <td>252.7</td>
+                          <td>270.54</td>
+                          <td>288.38</td>
+                          <td>306.22</td>
+                          <td>324</td>
+                        </tr>
+                        <tr>
+                          <td>High Plunge DMG (%)</td>
+                          <td>159.68</td>
+                          <td>172.67</td>
+                          <td>185.67</td>
+                          <td>204.24</td>
+                          <td>217.23</td>
+                          <td>232.09</td>
+                          <td>252.51</td>
+                          <td>272.93</td>
+                          <td>293.36</td>
+                          <td>315.64</td>
+                          <td>337.92</td>
+                          <td>360.2</td>
+                          <td>382.48</td>
+                          <td>405</td>
+                        </tr>
+                        <tr>
+                          <td>Musou Isshin Energy Restoration</td>
+                          <td>1.6</td>
+                          <td>1.7</td>
+                          <td>1.8</td>
+                          <td>1.9</td>
+                          <td>2</td>
+                          <td>2.1</td>
+                          <td>2.2</td>
+                          <td>2.3</td>
+                          <td>2.4</td>
+                          <td colspan="5">2.5</td>
+                        </tr>
+                        <tr>
+                          <td>Musou Isshin Duration</td>
+                          <td colspan="14">7s</td>
+                        </tr>
+                        <tr>
+                          <td>CD</td>
+                          <td colspan="14">18s</td>
+                        </tr>
+                        <tr>
+                          <td>Energy Cost</td>
+                          <td colspan="14">90</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('burstDropdownAnimation')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Preview
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top w3-card-4" id="burstDropdownAnimation">
+                    <img src="img/Secret_Art_Musou_Shinsetsu_Preview.gif" style="width:100%"/>
+                    <div class="w3-container">
+                      <span>Elemental Burst</span>
+                    <img src="img/Secret_Art_Musou_Shinsetsu_Musou_Isshin_Normal_Preview.gif" style="width:100%"/>
+                    <div class="w3-container">
+                      <span>Musou Isshin, Normal Attacks</span>
+                    </div>
+                    <img src="img/Secret_Art_Musou_Shinsetsu_Musou_Isshin_Charged_Preview.gif" style="width: 100%"/>
+                    <div class="w3-container">
+                      <span>Musou Isshin, Charged Attacks</span>
+                    </div>
+                    <img src="img/Secret_Art_Musou_Shinsetsu_Chakra_Desiderata_Preview.gif" style="width: 100%"/>
+                    <div class="w3-container">
+                      <span>Chakra Desiderata</span>
+                    </div>
+                    <img src="img/Secret_Art_Musou_Shinsetsu_Chakra_Desiderata_Allies_Preview.gif" style="width: 100%"/>
+                    <div class="w3-container">
+                      <span>Chakra Desiderata, Resolve stacks from allies</span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="talent-icon-img">
+                <img src="img/Talent_Wishes_Unnumbered.png"/>
+              </td>
+              <td class="talent-name-text">Wishes Unnumbered</td>
+              <td class="talent-type-text">1st Ascension Passive</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="w3-left-align">
+                When nearby party members gain Elemental Orbs or Particles, Chakra Desiderata gains 2 Resolve stacks.<br/>
+                This effect can occur once every 3s.
+                </p>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('firstTalentNote')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Gameplay Notes
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top" id="firstTalentNote">
+                    <ul>
+                      <li style="list-style-type: disc">Raiden Shogun does not need to be on the field herself to gain these Resolve stacks.</li>
+                      <li style="list-style-type: disc">This passive talent affects damage dealt by Raiden Shogun's Secret Art: Musou Shinsetsu.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('firstTalentNoteAnimation')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Preview
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top w3-card-4" id="firstTalentNoteAnimation">
+                    <img src="img/Wishes_Unnumbered_Preview.gif" style="width:100%"/>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="talent-icon-img">
+                <img src="img/Talent_Enlightened_One.png"/>
+              </td>
+              <td class="talent-name-text">Enlightened One</td>
+              <td class="talent-type-text">4th Ascension Passive</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="w3-left-align">
+                Each 1% above 100% Energy Recharge that the Raiden Shogun possesses grants her:<br/>
+                <ul>
+                  <li style="list-style-type: disc">0.6% greater Energy restoration from Musou Isshin</li>
+                  <li style="list-style-type: disc">0.4% <span class="w3-text-purple">Electro DMG Bonus</span>.</li>
+                </ul>
+                </p>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('forthTalentNote')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Gameplay Notes
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top" id="forthTalentNote">
+                    <ul>
+                      <li style="list-style-type: disc">The energy restoration bonus increases the flat energy produced by Musou Isshin 
+                        for her party members (including herself) by 0.6% per 1% of Raiden's bonus Energy Recharge. Despite the in-game 
+                        description, this bonus does not exclusively benefit herself. For example; with 200% bonus Energy Recharge (300% total), 
+                        this effect will cause Musou Isshin to produce 120% more energy, resulting in 5.5 energy instead of 2.5 per activation at 
+                        level 10, and a maximum of 27.5 over its duration, all of which will be received by both herself and her team.</li>
+                      <li style="list-style-type: disc">Because the energy restored by Musou Isshin is still a flat amount, it will not be 
+                        directly affected by the individual recipients' respective Energy Recharge stats. Regardless of if Raiden herself 
+                        has 300% Energy Recharge while her allies respectively have 100, 200, and 180%, all of them will still gain exactly 
+                        27.5 Energy.</li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="talent-icon-img">
+                <img src="img/Talent_All-Preserver.png"/>
+              </td>
+              <td class="talent-name-text">All-Preserver</td>
+              <td class="talent-type-text">Utility Passive</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="w3-left-align">
+                Mora expended when ascending Swords and Polearms is decreased by 50%.
+                </p>
+                <div class="w3-dropdown-click button-dropdown-container">
+                  <button class="attribute-btn" onClick="dropDownTrigger('utilityAnimation')">
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                    Preview
+                    <i class="material-icons" id="icon_arrow_downward">arrow_downward</i>
+                  </button>
+                  <div class="w3-dropdown-content w3-animate-top w3-card-4" id="utilityAnimation">
+                    <img src="img/All-Preserver_Preview.gif" style="width:100%"/>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="talent-mat-table w3-table w3-centered">
+          <thead>
+            <tr>
+              <th class="talent-lvl">Talent Level</th>
+              <th class="talent-req-asc">Required Ascension</th>
+              <th class="talent-mat">Mora</th>
+              <th class="talent-mat">Enhancement Materials</th>
+              <th class="talent-mat">Character Talent Materials</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 -> 2</td>
+              <td>2*</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>12,500</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Old_Handguard.png" alt="Old Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>6</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Teachings_of_Light.png" alt="Teachings of Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>3</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2 -> 3</td>
+              <td rowspan="2">3*</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>17,500</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Kageuchi_Handguard.png" alt="Kageuchi Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>3</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Guide_to_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>2</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>3 -> 4</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>25,000</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Kageuchi_Handguard.png" alt="Kageuchi Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>4</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Guide_to_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>4</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>4 -> 5</td>
+              <td rowspan="2">4*</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>30,000</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Kageuchi_Handguard.png" alt="Kageuchi Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>6</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Guide_to_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>6</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>5 -> 6</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>37,500</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Kageuchi_Handguard.png" alt="Kageuchi Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>9</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Guide_to_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>9</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>6 -> 7</td>
+              <td rowspan="2">5*</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>120,000</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Famed_Handguard.png" alt="Famed Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>4</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Philosophies_of_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>4</p>
+                  </div>
+                </div>
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Molten_Moment.png" alt="Molten Moment" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>1</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>7 -> 8</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>260,000</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Famed_Handguard.png" alt="Famed Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>6</p>
+                  </div>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Philosophies_of_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>12</p>
+                  </div>
+                </div>
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Molten_Moment.png" alt="Molten Moment" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>1</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>8 -> 9</td>
+              <td rowspan="2">6*</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>450,000</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Famed_Handguard.png" alt="Famed Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>9</p>
+                  </div>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Philosophies_of_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>12</p>
+                  </div>
+                </div>
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Molten_Moment.png" alt="Molten Moment" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>2</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>9 -> 10</td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:80%">
+                  <img class="ascen-mat-img" src="img/mora.png" alt="Mora" style="width: 100%"/>
+                  <div class="w3-container">
+                    <p>700,000</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="ascen-mat-container w3-card" style="width:75%">
+                  <img class="ascen-mat-img" src="img/Item_Famed_Handguard.png" alt="Famed Handguard" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>12</p>
+                  </div>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Philosophies_of_Light.png" alt="Guide to Light" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>16</p>
+                  </div>
+                </div>
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Molten_Moment.png" alt="Molten Moment" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>2</p>
+                  </div>
+                </div>
+                <div class="ascen-mat-container w3-card" style="width:50%">
+                  <img class="ascen-mat-img" src="img/Item_Crown_of_Insight.png" alt="Crown of Insight" style="width: 75%"/>
+                  <div class="w3-container">
+                    <p>1</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <h2 class="header">
+      <b class="header-font">Constellation</b>
+    </h2>
+    <div class="container">
+      <table class="constellation-table w3-table w3-centered">
+        <thead>
+          <tr>
+            <td class="constellation-icon">Icon</td>
+            <td class="constellation-name">Name</td>
+            <td class="constellation-lvl">Level</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="img/Constellation_Ominous_Inscription.png"/>
+            </td>
+            <td>
+              <p>
+                Chakra Desiderata will gather Resolve even faster. 
+                When <span class="w3-text-purple">Electro</span> characters use their Elemental Bursts, 
+                the Resolve gained is increased by 80%. 
+                When characters of other Elemental Types use their Elemental Bursts, the Resolve gained is increased by 20%.
+              </p>
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/Constellation_Steelbreaker.png"/>
+            </td>
+            <td>
+              <p>
+                While using Musou no Hitotachi and in the Musou Isshin state applied by Secret Art: Musou Shinsetsu, 
+                the Raiden Shogun's attacks ignore 60% of opponents' DEF.
+              </p>
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/Constellation_Shinkage_Bygones.png"/>
+            </td>
+            <td>
+              <p>
+                Increases the Level of Secret Art: Musou Shinsetsu by 3.<br/>
+                Maximum upgrade level is 15.
+              </p>
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/Constellation_Pledge_of_Propriety.png"/>
+            </td>
+            <td>
+              <p>
+                When the Musou Isshin state applied by Secret Art: Musou Shinsetsu expires, 
+                all nearby party members (excluding the Raiden Shogun) gain 30% bonus ATK for 10s.
+              </p>
+            </td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/Constellation_Shogun_27s_Descent.png"/>
+            </td>
+            <td>
+              <p>
+                Increases the Level of Transcendence: Baleful Omen by 3.<br/>
+                Maximum upgrade level is 15.
+              </p>
+            </td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/Constellation_Wishbearer.png"/>
+            </td>
+            <td>
+              <p>
+                While in the Musou Isshin state applied by Secret Art: Musou Shinsetsu, 
+                attacks by the Raiden Shogun that are considered part of her Elemental Burst will decrease all nearby party members' 
+                (but not including the Raiden Shogun herself) Elemental Burst CD by 1s when they hit opponents.<br/>
+                This effect can trigger once every 1s, and can trigger a total of 5 times during the state's duration.
+              </p>
+            </td>
+            <td>6</td>
+          </tr>
+        </tbody>
+      </table>
+      <span style="margin-left: 1rem">Each Constellation activation requires one <img src="img/Item_Stella_Fortuna_29.webp"/> Raiden Shogun's Stella Fortuna.</span>
+      <h3 class="sub-header">Should you pull her Constellations?</h3>
+      <p style="padding-left: 15px">
+        Raiden’s good Constellations are concentrated into C1-3. 
+        While it may be tempting to “max out” your Raiden by going for 2 or 3 more copies of her, consider this:
+      </p>
+        <ul>
+          <li style="list-style-type: disc">Raiden’s full team damage at C0 is comparable to most other teams without 5* Constellations, 
+            and C3 with C6 5* teams; 
+            pulling for her early Constellations is essentially a cheaper buy for a different carry’s max potential, 
+            but only in terms of damage and without a gameplay change.</li>
+          <li style="list-style-type: disc">Since they offer no gameplay change, they really only translates to faster clear times. 
+            If you already have the investment to clear content at C0, her Constellations won’t do anything for you beyond speed.</li>
+        </ul>
+      <p style="padding-left: 15px">
+        At the end of the day, it’s your primos and your money. 
+        But know that there is <span style="font-weight:bold">no pressure to pull her Constellations</span> in order to make her a good unit. 
+        Raiden is very strong regardless of Constellations and can help your account right out of the box if you put in the effort.
+      </p>
+    </div> 
+    <h2 class="header">
+      <b class="header-font">Playstyles</b>
+    </h2>
+    <div class="container">
+      <p class="infoParagraph">
+        <span class="w3-tag tag" style="font-weight:bold; font-size: 20px">Burst DPS (Hyper/On-field Raiden)</span><br/>
+        Building a team rotation around Raiden’s Burst allows her to deal large amounts of damage while batterying her teammates.
+      </p>
+      <p class="infoParagraph">
+        <span class="w3-tag tag" style="font-weight:bold; font-size: 20px">Hyperbloom Trigger (EM/Off-field Raiden)</span><br/>
+        Emphasizes Raiden’s Skill for its ability to easily trigger Hyperblooms off-field.
+      </p>
+      <h3 class="sub-header">Artifacts</h3>
+      <div style="padding-left: 15px">
+        Raiden’s gearing process is more complicated than the average unit, as her kit brings a hard to maintain balance between DMG%, 
+        ATK%, and ER% which translates to comfort, DMG%, and potentially ATK%.<br/>
+        <span style="font-weight:bold; font-size: 20px">Sands: ER% or ATK%</span><br/>
+        <p>
+          Thanks to Raiden’s A4, Emblem of Severed Fate, a part of ER% is converted into DMG%, 
+          as well as helping generate more Flat Energy with her Elemental Burst. 
+          That being said, <b>ATK% sands will be the preferred choice for her personal damage in most scenarios</b>, 
+          but ER% sands can range from 10% less personal damage to a negligible 
+          &lt; 1% difference depending on outside buffs.
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('wpEngulfingLighting')" >
+          Engulfing Lightning
+          </b>
+          <img src="img/Weapon_Engulfing_Lightning_2nd-min.png" class="infoPopUpImg" id="wpEngulfingLighting"/>
+          <span> will additionally convert ER to ATK%, which <b>leads ER sands to pull ahead with it</b>.</span>
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">Goblet: Electro DMG% or ATK%</span>
+        <p>
+          The prevalence of DMG% sources in Raiden’s kit can allow an ATK Goblet to be a comparable option in some narrow situations, 
+          such as without <b>external ATK buffers</b> 
+          such as:<em> Yoimiya, Xiangling, Sara, Bennett, Lynette, Aloy, Chevreuse, etc</em>,
+          with <b>significant external DMG% buffers</b>
+          such as:<em> Kazuha, Furina, Mona, Sara, Sucrose, etc</em>, 
+          without ATK Sands, and/or with high Base ATK weapons, but in most cases Electro DMG% will be her best choice given equal substats. 
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">Circlet: CRIT Rate or CRIT DMG</span>
+        <p>
+          Pick whichever brings you closer to a &frac12; ratio of CR/CD, taking into account other sources of CR and CD such as
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('wpTheCatch')" >The Catch</b>
+          <img src="img/Weapon_The_Catch_2nd-min.png" class="infoPopUpImg" id="wpTheCatch"/>
+          or Sara’s C6.  
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">Substats: CR = CD > ATK% &ge; ER > Flat ATK</span>
+        <p>
+          The balance between ER% and ATK% can vary as discussed with her Sands choices, but CRIT will always be more valuable than both. 
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">Elemental Mastery on Raiden?</span>
+        <p>
+          With the advent of Dendro, Elemental Mastery has become a more valuable stat for Raiden due to her ability to trigger Aggravate 
+          and Hyperbloom reactions. However, its value varies heavily on how many of these reactions she is able to trigger; generally, 
+          sticking to standard builds for Raiden in an on-field role is a safe option. That said, if reactions can be triggered consistently 
+          then Elemental Mastery can gain value and the stat should not be considered as wasted if played in such teams.
+          Moreover, Raiden can also more comfortably now assume a mostly off-field role as a Hyperbloom trigger – in these styles of teams, 
+          it is recommended to build Raiden fully focusing on Elemental Mastery.
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">ER requirement? </span>
+        <p>
+          There is no “correct” answer to this, as it depends on what you wish to accomplish. 
+          Raiden as a unit will value ER beyond just a requirement to cast her Elemental Burst, 
+          as ER% will translate into both DMG% and Flat Energy refund to both herself and her teammates. 
+          As such, her ER can fluctuate a lot depending on the chosen weapon and sands. <br/>
+          <br/>
+          Typically, 200%+ ER will be enough for her to battery herself even as solo Electro in most teams that don’t 
+          have atrocious Energy generation. This is easy to reach with an ER Sands or weapon, and hits a nice breakpoint 
+          of 20 Energy per Burst at TL10. Due to its ER secondary stat and propensity to value ER sands, Engulfing Lightning 
+          will often reach 250%+ ER before the bonus ER from the passive. 
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">Sets: 4pc Emblem of Severed Fate</span>
+        <div class="w3-tooltip">
+          <img src="img/flower_of_life_icon.png"/>
+          (<em>Hover the image to see this sets effects</em>)<br/>
+            <p class="w3-text">
+              2-Piece: Energy Recharge +20%.<br/>
+              4-Piece: Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.
+            </p></div>
+        <p>
+          <b>Undisputed BiS set for on-field Raiden</b>, giving you everything she wants in one package: ER on 2pc, 
+          as well as ER conversion to Burst DMG% on 4pc. Combined with her A4 passive, it allows Raiden to build ER while strengthening her damage. 
+          Simply equipping ESF onto Raiden will grant 20% ER, 38%+ Burst DMG, 8% Electro DMG and 1.5 extra Energy generation. 
+          All of these stats may seem small at first, but they add up and get better the higher her ER goes. <br/>
+          <br/>
+          If you ever find that another set can give you higher damage, either in Genshin Optimizer or in game, 
+          that does not mean it is a good alternative. It means you need to farm ESF more. 
+        </p>
+        <span style="font-weight:bold; font-size: 20px;">Other Sets</span>
+        <p>
+          As an off-field Hyperbloom trigger, Raiden can potentially make use of different artifact sets. 
+          She can boost her own reaction damage with 4 
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('artGildedDreams')" >Gilded Dreams</b>
+          <img src="img/Item_Dreaming_Steelbloom.webp" class="infoPopUpImg" id="artGildedDreams"/>
+          , or 2pc combinations of 
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('artGildedDreams2')" >Gilded Dreams</b> 
+          <img src="img/Item_Dreaming_Steelbloom.webp" class="infoPopUpImg" id="artGildedDreams2"/>
+          and 
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('artTroupe')" >Wanderer’s Troupe</b>
+          <img src="img/Item_Troupe_27s_Dawnlight.webp" class="infoPopUpImg" id="artTroupe"/>
+          . 
+          Alternatively, she can also opt to use more supportive artifacts such as 4 
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('artMillelith')" >Tenacity of the Millelith</b> 
+          <img src="img/Item_Flower_of_Accolades.webp" class="infoPopUpImg" id="artMillelith"/>
+          if her team has power 
+          Attack-scaling units. While 4 
+          <b class="infoPopUpTxt" onmouseover="infoPopUp('artDeepwood')" >Deepwood Memories</b> 
+          <img src="img/Item_Labyrinth_Wayfarer.webp" class="infoPopUpImg" id="artDeepwood"/>
+          increases both Hyperbloom damage and her teammates’ Dendro damage, 
+          there are typically better users for the set — however, if there are no other holders, it becomes Raiden’s best option.
+        </p>
+      </div>
+      <h3 class="sub-header">Weapons</h3>
+      <h4 class="sub-sub-header">Hyper/On-field Raiden</h4>
+      <p style="padding-left: 15px">
+        Averaged across a variety of buff options: unbuffed, TTDS, Kazuha, Kazuha + TTDS, 
+        C6 Sara + 4NO, Bennett + C6 Sara + 4NO, 
+        Bennett + Kazuha + TTDS + 4NO, Bennett + Kazuha + C6 Sara + 4NO, 
+        Bennett + Pyro resonance + 4NO<br/>
+        <br/>
+        4ESF. ER weapons use either ATK or ER Sands depending on which is higher damage, 
+        non ER weapons use ER Sands. It may be possible to run non ER weapons without ER 
+        sands in teams with Electro resonance, particularly with other Electro characters 
+        contributing Particles such as Fischl, Yae, or Sara if she uses her Charged Attack. 
+        <br/><br/>
+        Rotation used is 3x N3C + N1C unless otherwise specified. KQMC Standard
+      </p>
+      <div class="weapon-container w3-container">
+        <table class="weapon-table w3-table w3-centered">
+          <thead>
+            <th>Weapon Image</th>
+            <th>Weapon</th>
+            <th>% of “The Catch” R5</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Engulfing_Lightning_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Engulfing Lightning R1</td>
+              <td class="striped-table-row">114.2%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Raiden’s BiS and signature weapon. 
+                  Comes with the added benefit of incentivizing building more ER for damage, 
+                  removing any need to compromise between damage and comfort and improving her capacity 
+                  to battery the rest of her team. Matches her outfit.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Weapon_Staff_of_Homa_2nd-min.png" class="weaponImg"/>
+              </td>
+              <td>Staff of Homa R1</td>
+              <td>104.6%</td>
+              <td>
+                <p>
+                  Calculated above 50% HP. 
+                  Raiden has no innate HP drain built into her kit, so it is unlikely she will ever benefit 
+                  from the low HP passive. However, raw stats still make this a great option.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Primordial_Jade_Winged-Spear_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Primordial Jade Winged-Spear R1</td>
+              <td class="striped-table-row">103.1%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Zero stacks on Raiden’s initial slash hurts this weapon, 
+                  but she will still be able gain stacks over the duration of her Burst, 
+                  and the high Base ATK and CR secondary stat are definitely appreciated too.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Weapon_Calamity_Queller_2nd.webp" class="weaponImg"/>
+              </td>
+              <td>Calamity Queller R1</td>
+              <td>102.6%</td>
+              <td>
+                <p>
+                  Raiden’s rotation patterns (Skill to set up > period off of Raiden > Burst > on-field damage window) 
+                  actually lend themselves fairly well to this weapon, and while her off-field Skill damage is fairly minimal, 
+                  she is technically one of the few Polearm users who can benefit from the off-field portion of the passive for at 
+                  least a little bit of her damage. Other 5* may offer more desirable stats, but a ridiculous mountain of ATK is still 
+                  nothing to complain about.
+                </p>
+              </td>
+            </tr>
+            <tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/wavefin.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Wavebreaker’s Fin R5</td>
+              <td class="striped-table-row">102.3%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Calculated with 290 total Burst cost. Wavebreaker’s value will be highly variable depending on refine, 
+                  team Energy cost, and buffs, but it can be a competitive 4* option and it can help free up “The Catch” 
+                  for another unit if needed.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Weapon_Skyward_Spine_2nd-min.png" class="weaponImg"/>
+              </td>
+              <td>Skyward Spine R1</td>
+              <td>101.9%</td>
+              <td>
+                <p>
+                  Calculated with 3x N3C + N2C. Better base stats than The Catch, 
+                  but a worse passive. Raiden cannot trigger the Phys procs in her Burst, 
+                  but she can still benefit from the ATK speed. If this allows you to access higher damage combos, 
+                  Skyward Spine can end up an upgrade for Raiden.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Deathmatch_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Deathmatch R5</td>
+              <td class="striped-table-row">101.2%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Calculated against 2+ enemies. A very expensive upgrade over a fully F2P option, 
+                  but worth considering if you already own it or need “The Catch” for another unit. 
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Weapon_Lithic_Spear_2nd-min.png" class="weaponImg"/>
+              </td>
+              <td>Lithic Spear R5</td>
+              <td>100.0%</td>
+              <td>
+                <p>
+                  Calculated with 2 stacks. Only worth considering at high refine and with multiple Liyue teammates, 
+                  but it can be a fine option under those circumstances.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_The_Catch_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">“The Catch” R5</td>
+              <td class="striped-table-row">100%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Valuable passive well paired to Raiden’s damage profile. Go fish.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Vortex-min.png" class="weaponImg"/>
+              </td>
+              <td>Vortex Vanquisher R1</td>
+              <td>97.7%</td>
+              <td>
+                <p>
+                  Calculated unshielded. 
+                  All the stacking caveats of PJWS, but without any crit or 
+                  DMG% to sweeten the deal and with a conditional that Raiden teams rarely fulfill.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Deathmatch_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Deathmatch R1</td>
+              <td class="striped-table-row">96.0%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Decent alternative option if necessary. 
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/wavefin.png" class="weaponImg"/>
+              </td>
+              <td>Wavebreaker’s Fin R1</td>
+              <td>93.3%</td>
+              <td>
+                <p>
+                  Not really worth considering without refines.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Lithic_Spear_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Lithic Spear R1</td>
+              <td class="striped-table-row">92.2%</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Not really worth considering without refines.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Weapon_Favonius_Lance_2nd-min.png" class="weaponImg"/>
+              </td>
+              <td>Favonius Lance R1-5</td>
+              <td>84.8%</td>
+              <td>
+                <p>
+                  Favonius limits Raiden’s damage, and even in teams with other Energy 
+                  hungry units making up a higher portion of team damage than her it will 
+                  still at best draw even with “The Catch” and in most cases still be a downgrade. Not recommended.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4 class="sub-sub-header">EM/Off-field Raiden</h4>
+      <div class="weapon-container w3-container">
+        <table class="weapon-table w3-table w3-centered">
+          <thead>
+            <th>Weapon Image</th>
+            <th>Weapon</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Dragon27s_Bane_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Dragon’s Bane</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  Dragon’s Bane on Elemental Mastery builds provides the highest amount of EM of any polearm — 
+                  as Raiden has essentially no other stat requirements on such a build, Dragon’s Bane will generally 
+                  serve as the best option for her personal damage, despite the essentially wasted passive.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/Weapon_Moonpiercer_2nd-min.png" class="weaponImg"/>
+              </td>
+              <td>Moonpiercer</td>
+              <td>
+                <p>
+                  Moonpiercer serves as EM Raiden’s strongest F2P option — 
+                  it can also be situationally better for team damage than Dragon’s 
+                  Bane when Raiden is paired with strong Attack-scaling teammates who can make use of its passive.
+              </td>
+            </tr>
+            <tr>
+              <td class="striped-table-row">
+                <img src="img/Weapon_Favonius_Lance_2nd-min.png" class="weaponImg striped-table-row"/>
+              </td>
+              <td class="striped-table-row">Favonius Lance</td>
+              <td class="striped-table-row">
+                <p class="striped-table-row">
+                  While Raiden does not need the Energy Recharge on an EM build, 
+                  Favonius Lance can be considered if paired with exceptionally energy-hungry teammates in order to battery them.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <h2 class="header">
+      <b class="header-font">Team Building</b>
+    </h2>
+    <div class="container">
+      <p style="padding-left: 15px">
+        Consider the units you have, and what your other team might need. Given Raiden’s flexibility, 
+        you should be able to build a team for her that ensures both your teams will be able to reach their potential with minimal compromises.<br/>
+        <br/>
+        Your goal is to create a team that can meet any DPS checks thrown its way through some combination of buffing Raiden’s damage, 
+        bringing in additional damage from off-field DPS units and/or buffing those units as well, while still being able to survive any content 
+        it comes across through some combination of healing, shielding and/or damage reduction. 
+      </p>
+      <h3 class="sub-header">Buffs</h3>
+      <div class="container">
+        <p style="padding-left: 15px">
+          Buffers should be chosen so as to offer as much benefit to Raiden’s entire team as possible without contesting roles or complicating rotations. 
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
