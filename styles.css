@@ -315,3 +315,19 @@ ul li {
   width: 100%;
   height: auto;
 }
+
+.drop-down-table,
+.drop-down-table th,
+.drop-down-table td {
+  margin: 1rem;
+  padding: 15px;
+  width: 98%;
+}
+
+.drop-down-header {
+  cursor: pointer;
+}
+
+.drop-drop-content {
+  display: none;
+}

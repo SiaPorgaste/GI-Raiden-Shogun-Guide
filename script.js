@@ -293,6 +293,15 @@ function dropDownTrigger(id) {
   }
 }
 
+function dropDownTriggerLocal(id) {
+  let dropDownContent = document.getElementById(id + "content");
+  if (dropDownContent.style.display == "none") {
+    dropDownContent.style.display = "table-cell";
+  } else {
+    dropDownContent.style.display = "none";
+  }
+}
+
 function infoPopUp(id) {
   let info = document.getElementById(id);
   if (info.style.display == "none") info.style.display = "inline";
