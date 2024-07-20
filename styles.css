@@ -328,7 +328,7 @@ ul li {
   cursor: pointer;
 }
 
-.drop-drop-content {
+.drop-down-content {
   display: none;
   transition: display 0.3s ease;
 }
