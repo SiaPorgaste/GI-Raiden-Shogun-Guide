@@ -330,4 +330,5 @@ ul li {
 
 .drop-drop-content {
   display: none;
+  transition: display 0.3s ease;
 }
