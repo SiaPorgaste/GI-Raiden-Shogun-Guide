@@ -308,3 +308,30 @@ function infoPopUp(id) {
   else info.style.display = "none";
   setTimeout(infoPopUp, 500);
 }
+
+function dropDownDivIconHandler(id) {
+  let dropDownDiv = document.getElementById(id + "Container");
+  let arrow = document.getElementById(id + "Arrow");
+  // let table = document.getElementById(id + "Table");
+  if (
+    dropDownDiv.classList.contains("inactive") &&
+    !dropDownDiv.classList.contains("active")
+  ) {
+    dropDownDiv.classList.remove("inactive");
+    dropDownDiv.classList.add("active");
+    if (arrow.classList.contains("arrow-up")) {
+      arrow.classList.remove("arrow-up");
+    }
+    arrow.classList.add("arrow-down");
+  } else if (
+    !dropDownDiv.classList.contains("inactive") &&
+    dropDownDiv.classList.contains("active")
+  ) {
+    dropDownDiv.classList.remove("active");
+    dropDownDiv.classList.add("inactive");
+    if (arrow.classList.contains("arrow-down")) {
+      arrow.classList.remove("arrow-down");
+    }
+    arrow.classList.add("arrow-up");
+  }
+}
