@@ -1,0 +1,8 @@
+.image {
+  border-radius: 50%;
+  border: 3px solid #fe23f4;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 30px;
+}

@@ -1,0 +1,31 @@
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 340px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #efe123;
+  border-radius: 20px;
+  border: 3px solid #fe23f4;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ff0b0b;
+  text-align: justify;
+}
+
+.mainText {
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fe23f4;
+}

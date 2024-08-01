@@ -1,0 +1,30 @@
+.articleList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articleItem {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+}
+
+.cardImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
